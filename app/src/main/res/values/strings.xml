@@ -7,4 +7,6 @@
     <string name="passw">Contraseña</string>
     <string name="access">Login</string>
     <string name="create">Crea una cuenta</string>
+    <string name="additem">Añadir Tarea</string>
+    <string name="terminado">Terminado</string>
 </resources>
