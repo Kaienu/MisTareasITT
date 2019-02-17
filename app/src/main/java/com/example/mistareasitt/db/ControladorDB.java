@@ -1,6 +1,8 @@
 package com.example.mistareasitt.db;
 
+import android.content.ContentValues;
 import android.content.Context;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
@@ -21,5 +23,51 @@ public class ControladorDB extends SQLiteOpenHelper {
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
 
+    }
+
+    public void addTarea(String tarea){
+
+        ContentValues registro = new ContentValues();
+        registro.put("NOMBRE",tarea);
+
+        SQLiteDatabase db = this.getWritableDatabase();
+        db.insert("TAREAS",null,registro);
+        db.close();
+
+    }
+
+    public String[] obtenerTareas(){
+
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor cursor = db.rawQuery("SELECT * FROM TAREAS",null);
+
+        int regs = cursor.getCount();
+        if (regs == 0) {
+            db.close();
+            return null;
+        } else {
+            String[] tareas = new String[regs];
+            cursor.moveToFirst();
+            for (int i = 0; i<regs; i++) {
+                tareas[i] = cursor.getString(1);
+                cursor.moveToNext();
+            }
+            db.close();
+            return tareas;
+        }
+
+    }
+
+    public int numeroRegistros(){
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor cursor = db.rawQuery("SELECT * FROM TAREAS",null);
+        db.close();
+        return cursor.getCount();
+    }
+
+    public void borrarTarea(String tarea) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        db.delete("TAREAS", "NOMBRE=?", new String[]{tarea});
+        db.close();
     }
 }
