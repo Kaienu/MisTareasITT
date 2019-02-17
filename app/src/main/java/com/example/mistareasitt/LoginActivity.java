@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.support.design.widget.TextInputEditText;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.Gravity;
 import android.view.View;
 import android.widget.Toast;
 
@@ -18,7 +19,8 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     public void crearCuenta(View view){
-        Toast toast = Toast.makeText(this, "Función en desarrollo", Toast.LENGTH_SHORT);
+        Toast toast = Toast.makeText(this, "Escríbeme a: kaienu.jp@gmail.com", Toast.LENGTH_SHORT);
+        toast.setGravity(Gravity.TOP,0,20);
         toast.show();
     }
 

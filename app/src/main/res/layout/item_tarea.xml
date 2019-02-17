@@ -18,7 +18,12 @@
         android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/terminado"
+        android:drawableStart="@drawable/delete"
+        android:text="@string/borrar"
+        android:textColor="@android:color/background_light"
+        android:background="@drawable/boton_borrar"
         android:layout_alignParentRight="true"
-        android:onClick="borrarTarea"/>
+        android:onClick="deleteTask"
+        />
+
 </RelativeLayout>

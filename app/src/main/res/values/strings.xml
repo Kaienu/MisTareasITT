@@ -1,12 +1,13 @@
 <resources>
-    <string name="app_name">MisTareasITT</string>
-    <string name="mis_tareas">Mis tareas</string>
+    <string name="app_name">TodoList</string>
+    <string name="mis_tareas">TodoList</string>
     <string name="backimage">imagen de fondo</string>
-    <string name="itt">ITT</string>
+    <string name="itt">Actividad 2</string>
     <string name="usuario">Usuario</string>
     <string name="passw">Contraseña</string>
     <string name="access">Login</string>
-    <string name="create">Crea una cuenta</string>
+    <string name="create">Creado por Pedro Muñoz</string>
     <string name="additem">Añadir Tarea</string>
-    <string name="terminado">Terminado</string>
+    <string name="terminado">Borrar</string>
+    <string name="borrar">Borrar</string>
 </resources>

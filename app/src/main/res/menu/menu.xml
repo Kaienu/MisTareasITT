@@ -6,7 +6,7 @@
 
     <item
         android:id="@+id/botonAdd"
-        android:icon="@mipmap/mas36"
+        android:icon="@drawable/ic_tag_plus"
         app:showAsAction="always"
         android:title="@string/additem" />
 
