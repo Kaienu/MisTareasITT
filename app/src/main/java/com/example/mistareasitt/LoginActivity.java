@@ -28,7 +28,7 @@ public class LoginActivity extends AppCompatActivity {
         TextInputEditText usuario = (TextInputEditText) findViewById(R.id.usuarioIn);
         TextInputEditText passw = (TextInputEditText) findViewById(R.id.contraIn);
 
-        if(usuario.getText().toString().equalsIgnoreCase("itt") && passw.getText().toString().equalsIgnoreCase("1234") ){
+        if(usuario.getText().toString().equalsIgnoreCase("itt") && passw.getText().toString().equalsIgnoreCase("123") ){
             Intent intent = new Intent(this, MainActivity.class);
             startActivity(intent);
         } else {
